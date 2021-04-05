@@ -1,0 +1,43 @@
+/* .comment-heading {
+    max-width: 84vw;
+    min-width: 84vw;
+    text-align: start;
+} */
+
+.issue {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) { 
+    .issue {
+    font-size: 1rem;
+    font-weight: 400;
+    } 
+}
+
+.avatar-img {
+    min-width: 47px;
+    max-width: 47px;
+}
+
+/* .comment-card {
+    max-width: 79vw;
+    min-width: 79vw;
+
+} */
+
+.comment-title {
+    height: 48px;
+}
+
+.comment-body {
+    word-break: break-all;
+}
+
+.comment-body img {
+    max-width: 100%;
+}
+
+
+

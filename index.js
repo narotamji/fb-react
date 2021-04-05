@@ -28,7 +28,7 @@ fetch(dataUrl)
 
         const divEl = document.createElement("div");
         divEl.setAttribute("id", issues.number);
-        divEl.innerHTML = `<a href="/comments.html?number=${issues.number}">
+        divEl.innerHTML = `<a href="comments.html?number=${issues.number}">
         <div class="issue-container p-2 py-2 d-flex justify-content-between align-items-center border-bottom">
           <div class="d-flex">
             <div class="align-self-start pl-2">

@@ -35,6 +35,15 @@
     word-break: break-all;
 }
 
+
+.comment-body p,
+.comment-body pre {
+    word-break: break-all;
+    width: 100%;
+    white-space: pre-wrap;
+}
+
+
 .comment-body img {
     max-width: 100%;
 }

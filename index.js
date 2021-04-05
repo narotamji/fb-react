@@ -8,7 +8,7 @@ fetch(dataUrl)
   .then((response) => response.json())
   .then((data) => {
       data.map((issues) => {
-        console.log(issues);
+//         console.log(issues);
         const labelTitleEl = issues.labels.map(
           (label) =>
             `<span class="text-nowrap mr-1 label-text" style="background-color:#${label.color}">${label.name}</span>`

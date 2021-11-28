@@ -22,7 +22,15 @@ fetch(dataUrl)
       const issueStateEl = `<span class="p-0 m-0 text-muted d-flex"><div class="mr-1">${issueState}</div><div><b>${issues.user.login}</b> opened this issue on ${issueCreatedDate}. <ins>${issues.comments} Comments</ins></div></span>`;
       const issueBody = issues.body;
       const userAvatarImg = `<img class="img-fluid rounded" src="${issues.user.avatar_url}" alt="user-image">`;
-      const issueCardTitle = `<p class="p-0 m-0 ml-3"><b>${issues.user.login}</b> Commented on ${issueCreatedDate}</p>`;
+      const issueCardTitle = `
+      <div class="avatar-img d-block d-sm-none py-2 pl-2">
+      ${userAvatarImg}
+      </div>
+      <div class="pl-2">
+      <p class="p-0 m-0">
+      <b>${issues.user.login}</b> Commented on ${issueCreatedDate}
+      </p>
+      </div>`;
 
       const issueTitleEl = document.createElement('div');
       issueTitleEl.innerHTML = `
@@ -69,10 +77,16 @@ fetch(dataUrl)
       .then((data) => {
         data.map((comment) => {
           const commentText = comment.body;
-          const commentTitle = `<p class="p-0 m-0 ml-3"><b>${
-            comment.user.login
-          }</b> Commented on ${timeAgo(comment.created_at)}</p>`;
           const avatarImage = `<img class="img-fluid rounded" src="${comment.user.avatar_url}" alt="user-image">`;
+          const commentTitle = `
+          <div class="avatar-img d-block d-sm-none py-1 pl-1">
+      ${avatarImage}
+      </div>
+      <div class="pl-2">
+      <p class="p-0 m-0"><b>${
+        comment.user.login
+      }</b> Commented on ${timeAgo(comment.created_at)}</p>
+      </div>`;
 
           const commentCard = `
       <div class="border rounded">

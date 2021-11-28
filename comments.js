@@ -23,7 +23,7 @@ fetch(dataUrl)
       const issueBody = issues.body;
       const userAvatarImg = `<img class="img-fluid rounded" src="${issues.user.avatar_url}" alt="user-image">`;
       const issueCardTitle = `
-      <div class="avatar-img d-block d-sm-none py-2 pl-2">
+      <div class="avatar-img d-block d-sm-none py-2 pl-1">
       ${userAvatarImg}
       </div>
       <div class="pl-2">
